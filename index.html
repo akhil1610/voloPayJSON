@@ -6,251 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
     <title>TestImageDesign</title>
-    <style>
-        /* universal formating*/
-        * {
-            margin: 0px;
-            border: 0px;
-            padding: 0px;
-        }
-
-        body {
-            background-color: #3f406c;
-            font-family: Poppins, Helvetica, sans-serif
-        }
-
-        /* progress dots in navbar */
-        .loading .load {
-            top: 8px;
-            left: 11px;
-            position: relative;
-            width: 8px;
-            height: 8px;
-            margin: 0 2px;
-            background-color: #FAFEFD;
-            border-radius: 50%;
-            display: inline-block;
-            animation-name: dots;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-        }
-
-        .loading .load:nth-child(2) {
-            background-color: #FAFEFD;
-            animation-delay: 0.4s;
-        }
-
-        .loading .load:nth-child(3) {
-            background-color: #FAFEFD;
-            animation-delay: 0.8s;
-        }
-
-        /* end of progress */
-
-        /* Navigantion bar */
-
-        .nav {
-            height: 35px;
-            width: auto;
-            background-color: #52557e;
-        }
-
-        .bg-color {
-            background-color: #52557e;
-        }
-
-        .search {
-            display: inline;
-            float: right;
-            background-color: #5a5f89;
-            height: 35px;
-            width: 300px;
-        }
-
-        .search::placeholder {
-            color: #9195b8;
-            margin-right: 20px;
-            padding-left: 20px;
-            font-size: x-small;
-        }
-
-        ::placeholder {
-            /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: #9195b8;
-            opacity: 1;
-            /* Firefox */
-        }
-
-        :-ms-input-placeholder {
-            /* Internet Explorer 10-11 */
-            color: #9195b8;
-        }
-
-        ::-ms-input-placeholder {
-            /* Microsoft Edge */
-            color: #9195b8;
-        }
-
-        .btn {
-            float: right;
-            width: 35px;
-            height: 35px;
-            background-color: #a88cd9;
-            color: #FAFEFD;
-        }
-
-        .bang {
-            position: absolute;
-            color: #d7d9ea;
-            font-size: 13px;
-            font-weight: bold;
-            padding-top: 10px;
-            padding-left: 13px;
-            margin-left: 10px;
-        }
-
-        /* end of nav bar */
-
-        /* Grid systems */
-
-        .container-main {
-            margin: 4% 12% 12% 12%;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-gap: 6px;
-            background-color: transparent;
-            padding: 10px;
-        }
-
-        .grid-container>div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            padding: 0;
-            font-size: 30px;
-        }
-
-        .item-bg {
-            padding: 95px 0;
-            background-repeat: no-repeat;
-            background-position: right;
-            background-size: cover;
-        }
-
-
-        .item1 {
-            grid-column: 1 / span 2;
-        }
-
-        .bg-purple {
-            background-color: #5a5f89 !important;
-        }
-
-        .item10 {
-            grid-column-start: 3;
-            grid-column-end: 5;
-        }
-
-        .card-des {
-            font-size: 16px;
-            padding: 17px 24px 20px 30px;
-
-            text-align: left;
-            background-color: #5a5f89;
-            color: #fbfcff;
-        }
-
-        .btn-mp {
-            background-color: #aa8ed9;
-            color: #fbfcff;
-            padding: 9px;
-        }
-
-        .itm4-loading {
-            padding: 19px 0px 27px 0px;
-        }
-
-        .itm4-cont {
-            width: 134px;
-            line-height: 37px !important;
-            font-size: 30px;
-        }
-
-        .dum-cont {
-            font-size: x-small;
-            margin: 8px 0;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .mr-12 {
-            margin-right: 12px;
-        }
-
-        .fs-xs {
-            font-size: x-small;
-        }
-
-        .mt-10 {
-            margin-top: 10px;
-        }
-
-        h2 {
-            font-weight: 600 !important;
-            margin-bottom: 0;
-            line-height: 30px !important;
-        }
-
-        /* end of grid systems*/
-
-        /* media Querry */
-
-        @keyframes dots {
-            50% {
-                opacity: 0;
-                transform: (0.7) translateY(10px);
-            }
-
-        }
-
-        @media (min-width:240px) {
-            .grid-container {
-                display: block;
-            }
-
-            .container-main {
-                margin: 0;
-            }
-
-            .margin-item {
-                margin-bottom: 15px;
-            }
-        }
-
-        @media (min-width:1060px) {
-            .grid-container {
-                display: grid;
-                margin-bottom: 0;
-            }
-
-            .container-main {
-                margin: 4% 12% 12% 12%;
-            }
-
-            .margin-item {
-                margin-bottom: 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -269,133 +27,48 @@
         </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-
-    var cardDetials = [
-        {
-            "id": 1,
-            "imgUrl": "opp.jpg",
-            "title": "Library Update",
-            "headding": "Leveraging Social Proof for",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered the art of data driven product development through AB testing and a focus on the right metrics to optimize driven product development through AB testing and a focus on the right metrics to to optimize driven product development through AB testing and a focus on the right optimize.",
-            "isLarge": true
-        },
-        {
-            "id": 2,
-            "imgUrl": "pc.png",
-            "title": "Library Update",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 3,
-            "imgUrl": "grp.jpg",
-            "title": "Culture and Team",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 4,
-            "title": "Its time to get to know your users",
-            "isLarge": false
-        },
-        {
-            "id": 5,
-            "imgUrl": "camara.jpg",
-            "title": "Culture and Team",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 6,
-            "imgUrl": "light.png",
-            "title": "Product Launch",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 7,
-            "imgUrl": "ddc.jpeg",
-            "title": "ddc",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 8,
-            "imgUrl": "ddc.jpeg",
-            "title": "ddc",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 9,
-            "imgUrl": "man.jpg",
-            "title": "Culture and Team",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered",
-            "isLarge": false
-        },
-        {
-            "id": 10,
-            "imgUrl": "stat.png",
-            "title": "Trends",
-            "headding": "Leveraging Social Proof for Growth",
-            "description": "Duolingo removes language barriers by connecting people that need websites translated with students that are learning a language. Through trial and error the team at Duolingo has mastered the art of data driven product development through AB testing and a focus on the right metrics to optimize driven product development through AB testing and a focus on the right metrics to to optimize driven product development through AB testing and a focus on the right optimize.",
-            "isLarge": true
-        }
-
-    ]
-</script>
-<script>
-    var getDiv = ''
-    for (var key in cardDetials) {
-        if (cardDetials.hasOwnProperty(key)) {
-            getDiv += `<div class="
-            ${cardDetials[key].isLarge == true && cardDetials.length - 1 == key && 'item10'} 
-            ${cardDetials[key].isLarge == true && cardDetials.length - 1 != key && 'item1'} 
-            ${cardDetials[key].isLarge == false && key == 3 ? 'item4 bg-purple' : 'item2 bg-purple'}">
-            <div class="item item-bg1 
-                    ${key != 3 && 'item-bg'}"  style="background-image:url(${cardDetials[key].imgUrl})"></div>`;
-            if (key == 3) {
-                getDiv += `<div class="card-des">
-                                    <div class="loading itm4-loading">
-                                        <span class="load"></span>
-                                        <span class="load"></span>
-                                        <span class="load"></span>
-                                    </div>
-                                    <h1 class="itm4-cont"> ${cardDetials[key].title}</h2>
-                                    <button class="btn-mp mt-10">Try Mixpanel today</button>
-                                </div>`;
-            } else {
-                getDiv += ` <div class="card-des slider">
-                                    <li style="list-style-type: circle;">${cardDetials[key].title}</li>
-                                    <h2>Leveraging Social Proof for <br>Growth</h2>
-                                    <p class="dum-cont">${cardDetials[key].description}</p>
-                                    <div class="d-flex">
-                                        <div class="mr-12">
-                                            <i class="far fa-user fa-xs"></i>
-                                            <span class="fs-xs">Anna</span>
-                                        </div>
-                                        <div class="mr-12">
-                                            <i class="far fa-clock fa-xs"></i>
-                                            <span class="fs-xs">Today</span>
-                                        </div>
-                                    </div>
-                                </div>`;
+    $.ajax({url: "db.json", success: function(result){
+        var cardDetials='';
+        var getDiv='';
+        cardDetials = result;
+        for (var key in cardDetials) {
+            if (cardDetials.hasOwnProperty(key)) {
+                getDiv +=`<div class="${cardDetials[key].isLarge == true && cardDetials.length - 1 == key && 'item10'} ${cardDetials[key].isLarge == true && cardDetials.length - 1 != key && 'item1'} ${cardDetials[key].isLarge == false && key == 3 ? 'item4 bg-purple' : 'item2 bg-purple'}">
+                    <div class="item item-bg1 ${key != 3 && 'item-bg' }"  style="background-image:url(${cardDetials[key].imgUrl})"></div>`;
+                if(key == 3){
+                    getDiv +=`<div class="card-des">
+                        <div class="loading itm4-loading">
+                            <span class="load"></span>
+                            <span class="load"></span>
+                            <span class="load"></span>
+                        </div>
+                        <h1 class="itm4-cont"> ${cardDetials[key].title}</h2>
+                        <button class="btn-mp mt-10">Try Mixpanel today</button>
+                    </div>`;
+                }else{
+                    getDiv +=` <div class="card-des slider">
+                        <li style="list-style-type: circle;">${cardDetials[key].title}</li>
+                        <h2>Leveraging Social Proof for <br>Growth</h2>
+                        <p class="dum-cont">${cardDetials[key].description}</p>
+                        <div class="d-flex">
+                            <div class="mr-12">
+                                <i class="far fa-user fa-xs"></i>
+                                <span class="fs-xs">Anna</span>
+                            </div>
+                            <div class="mr-12">
+                                <i class="far fa-clock fa-xs"></i>
+                                <span class="fs-xs">Today</span>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+                getDiv +=`</div>`;
             }
-            getDiv += `</div>`;
-        }
-    }
-
-    $('#appendData').append(getDiv);
+        }           
+        $('#appendData').append(getDiv);
+        console.log(getDiv,"hey")
+    }});
 </script>
-
 </html>
